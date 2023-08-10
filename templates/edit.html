@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Movies{% endblock %}
+
+{% block content %}
+
+<form action="{{url_for('update_rating', movie_id = mov_id.id)}}" method="POST">
+<div class="content">
+  <h1 class="heading">Movie Title</h1>
+    <p class="description">Edit Movie Rating</p>
+    <table>
+
+      <tr>
+        <td> <div> Your Rating Out of 10 </div></td>
+      </tr>
+      <tr>
+        <td><div> <input placeholder="{{mov_id.rating}}" name="new_rating"> </div></td>
+      </tr>
+      <tr>
+        <td> Your Review</td>
+      </tr>
+      <tr>
+        <td> <input placeholder="{{mov_id.review}}" name="new_review"> </td>
+      </tr>
+      <tr>
+        <td><button type="submit" >Update</button> </td>
+      </tr>
+
+    </table>
+
+
+
+
+
+  </div>
+
+  </form>
+{% endblock %}
